@@ -1,0 +1,37 @@
+.the-navbar {
+  @extend .full-width;
+  
+  &__menu {
+    @extend .px-5;
+    border-bottom: inherit;
+  }
+  &__menu-items {
+    display: flex; 
+    justify-content: space-between;
+
+    &--text {
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    &--left, &--right {
+      display: flex;
+    }
+  }
+  .el-submenu__title,
+  .el-menu-item {
+    height: $--navbar-height;
+    line-height: 40px;
+    font-weight: lighter;
+    .el-avatar{
+      border-radius: 0;
+      margin-right: 20px;
+    }
+  }
+}
+
+// color icons on navbar
+.el-menu-item > .text-light,
+.el-submenu__title > i {
+  color: #ffffff !important;
+}

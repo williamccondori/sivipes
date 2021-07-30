@@ -1,0 +1,25 @@
+.el-aside {
+  // transitions collapsed sidebar
+  transition: width .75s;
+}
+
+.the-sidebar {
+  // removing effects of type="border-card" on <el-tabs> component
+  border: none !important;
+  box-shadow: none !important;
+  // fix padding when type="border-card" is used on <el-tabs> component
+  &>.el-tabs__content, 
+  .el-tabs__nav-wrap {
+    @extend .pa-0;
+  }
+
+  & .el-tabs__item {
+    width: 150px; // tabs width
+  }
+
+  // hidden tabs arrows inserted when width is resize from element ui
+  .el-tabs__nav-next,
+  .el-tabs__nav-prev {
+    display: none;
+  }
+}

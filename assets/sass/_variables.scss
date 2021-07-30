@@ -1,0 +1,42 @@
+// font-family
+$font-header: 'Titillium Web', sans-serif;
+$font-base: 'Open Sans', sans-serif;
+/* theme color */
+$--color-primary: #00BCD4;
+$--color-secondary: #4D92A5;
+// $--color-success: #E91E63;
+
+/* custom text color */
+$--color-app-text: rgb(236, 241, 241);
+$--color-menu-nav-text: rgb(236, 236, 236);
+
+$--card-padding: 0.5rem 0.8rem;
+/* el-main component */
+$--main-padding: .9rem;
+
+$--navbar-height: 45px;
+
+/* heading font - color*/
+$shade-light: #72767b;
+$shade-normal: #4D92A5;
+$shade-dark: #4D92A5;
+
+$--drawer-bg-color: whitesmoke;
+// the :export directive is the magic sauce for webpack
+
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  navbarBgColor: $--color-secondary;
+  navbarTextColor: $--color-menu-nav-text;
+  navbarHeight: $--navbar-height;
+
+  sidebarBgColor: white;
+  sidebarWidth: 300px;
+  // sidebarTextColor: ;
+  sidebarActiveTextColor: $--color-app-text;
+}
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";

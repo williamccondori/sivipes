@@ -1,0 +1,29 @@
+.card-satelital-images {
+  background-color: $--drawer-bg-color !important;
+  transition: background-color .5s;
+
+  &:hover {
+    background-color: white !important;
+  }
+
+  // & .el-card__body {
+  // }
+
+  & .el-card__body__details {
+    display: flex;
+
+    &--image {
+      align-self: center;
+    }
+    &--text {
+      display: flex;
+      flex-direction: column;
+      @extend .px-2;
+      word-break: break-word; 
+    }
+  }
+
+  & button > i {
+    pointer-events: none;
+  }
+}

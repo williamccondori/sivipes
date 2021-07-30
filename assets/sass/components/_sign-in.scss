@@ -1,0 +1,50 @@
+.sign-in {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__form {
+    width: 300px;
+    overflow: inherit !important;
+    position: relative;
+
+    &>.el-card__body {
+      @extend .py-0;
+    }
+
+    &__logo {
+      @extend .pa-2;
+      background-color: white;
+      border-radius: 50%;
+      height: 96px;
+      width: 96px;
+      position: absolute !important;
+      left: 50%;
+      transform: translate(-50%, -62%);
+    }
+
+    &__title {
+      @extend .text-center;
+      color: $--color-app-text;
+      padding-top: 44px;
+      @extend .my-3;
+    }
+
+    &__btn {
+      @extend .full-width;
+    }
+  }
+}
+
+.logo-animation {
+  & > img {
+    animation: spin 4s linear infinite;
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

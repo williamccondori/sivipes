@@ -1,0 +1,24 @@
+// experimental custom colors
+
+$--color-secondary: tomato !default;
+$--color-secondary-text: #DCDFE6 !default;
+
+@mixin secondary($bgColor, $textColor: false) {
+  .el-button--secondary {
+    background-color: $bgColor !important;
+    border-color: $bgColor !important;
+
+    &:hover,
+    &.active,
+    &:focus {
+      background: lighten($bgColor, 7);
+      border-color: lighten($bgColor, 7);
+    }
+
+    @if $textColor {
+      color: $textColor;
+    }
+  }
+}
+
+@include secondary($--color-secondary);

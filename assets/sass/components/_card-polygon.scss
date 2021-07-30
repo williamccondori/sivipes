@@ -1,0 +1,17 @@
+.card-polygon {
+  background-color: $--drawer-bg-color !important;
+  transition: background-color .5s;
+
+  &:hover {
+    background-color: white !important;
+  }
+
+  & .el-card__body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & button > i {
+    pointer-events: none;
+  }
+}

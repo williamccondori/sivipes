@@ -1,0 +1,53 @@
+$max: 5; // ex: pt-5
+$offset: 4; // ex: 4px ~ 8px
+$unit: 'px';
+
+@mixin distance($className, $styleName) {
+  $i: 0;
+  @while $i <= $max {
+    #{$className + $i} { 
+      #{$styleName}: #{($i * $offset) + $unit} !important;
+    }
+    $i: $i + 1;
+  }
+}
+
+@mixin distanceHorizontal($className, $styleName) {
+  $i: 0;
+  @while $i <= $max {
+    #{$className + $i} { 
+      #{$styleName}-left: #{($i * $offset) + $unit} !important;
+      #{$styleName}-right: #{($i * $offset) + $unit} !important;
+    }
+    $i: $i + 1;
+  }
+}
+
+@mixin distanceVertical($className, $styleName) {
+  $i: 0;
+  @while $i <= $max {
+    #{$className + $i} { 
+      #{$styleName}-top: #{($i * $offset) + $unit} !important;
+      #{$styleName}-bottom: #{($i * $offset) + $unit} !important;
+    }
+    $i: $i + 1;
+  }
+}
+
+// Margins
+@include distance('.mt-', 'margin-top');
+@include distance('.mr-', 'margin-right');
+@include distance('.mb-', 'margin-bottom');
+@include distance('.ml-', 'margin-left');
+@include distance('.ma-', 'margin');
+@include distanceHorizontal('.mx-', 'margin');
+@include distanceVertical('.my-', 'margin');
+
+// Paddings
+@include distance('.pt-', 'padding-top');
+@include distance('.pr-', 'padding-right');
+@include distance('.pb-', 'padding-bottom');
+@include distance('.pl-', 'padding-left');
+@include distance('.pa-', 'padding');
+@include distanceHorizontal('.px-', 'padding');
+@include distanceVertical('.py-', 'padding');
