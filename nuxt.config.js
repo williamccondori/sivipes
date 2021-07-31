@@ -82,10 +82,7 @@ export default {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    baseURL:
-      process.env.NODE_ENV === 'production'
-        ? process.env.API_URL_PROD
-        : process.env.API_URL_DEV
+    baseURL: 'http://143.244.178.63:8000/api'
   },
   /**
    ** Global middleware from auth module
